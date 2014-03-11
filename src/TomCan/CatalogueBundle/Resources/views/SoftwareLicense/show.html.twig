@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>SoftwareLicense</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Softwarelicensetype</th>
+                <td>{{ entity.softwareLicenseType }}</td>
+            </tr>
+            <tr>
+                <th>Seats</th>
+                <td>{{ entity.seats }}</td>
+            </tr>
+            <tr>
+                <th>Licensekey</th>
+                <td>{{ entity.licenseKey }}</td>
+            </tr>
+            <tr>
+                <th>Remark</th>
+                <td>{{ entity.remark }}</td>
+            </tr>
+            <tr>
+                <th>Upgradedfrom</th>
+                <td>{{ entity.upgradedFrom }}</td>
+            </tr>
+            <tr>
+                <th>Upgradedto</th>
+                <td>{{ entity.upgradedTo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('software_licenses') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('software_licenses_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

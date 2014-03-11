@@ -1,0 +1,4 @@
+catalogue:
+    resource: "@CatalogueBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,15 @@
+CatalogueBundle_vendor:
+    resource: "@CatalogueBundle/Resources/config/routing/vendor.yml"
+    prefix:   /vendors
+
+CatalogueBundle_softwarecategory:
+    resource: "@CatalogueBundle/Resources/config/routing/softwarecategory.yml"
+    prefix:   /software/categories
+
+CatalogueBundle_software:
+    resource: "@CatalogueBundle/Resources/config/routing/softwaretitle.yml"
+    prefix:   /software
+
+CatalogueBundle_software_licenses:
+    resource: "@CatalogueBundle/Resources/config/routing/softwarelicense.yml"
+    prefix:   /software/licenses

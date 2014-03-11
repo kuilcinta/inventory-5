@@ -1,0 +1,30 @@
+softwarecategory:
+    pattern:  /
+    defaults: { _controller: "CatalogueBundle:SoftwareCategory:index" }
+
+softwarecategory_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CatalogueBundle:SoftwareCategory:show" }
+
+softwarecategory_new:
+    pattern:  /new
+    defaults: { _controller: "CatalogueBundle:SoftwareCategory:new" }
+
+softwarecategory_create:
+    pattern:  /create
+    defaults: { _controller: "CatalogueBundle:SoftwareCategory:create" }
+    requirements: { _method: post }
+
+softwarecategory_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CatalogueBundle:SoftwareCategory:edit" }
+
+softwarecategory_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CatalogueBundle:SoftwareCategory:update" }
+    requirements: { _method: post|put }
+
+softwarecategory_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CatalogueBundle:SoftwareCategory:delete" }
+    requirements: { _method: post|delete }

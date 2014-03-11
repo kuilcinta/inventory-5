@@ -1,0 +1,30 @@
+software_licenses:
+    pattern:  /
+    defaults: { _controller: "CatalogueBundle:SoftwareLicense:index" }
+
+software_licenses_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CatalogueBundle:SoftwareLicense:show" }
+
+software_licenses_new:
+    pattern:  /new
+    defaults: { _controller: "CatalogueBundle:SoftwareLicense:new" }
+
+software_licenses_create:
+    pattern:  /create
+    defaults: { _controller: "CatalogueBundle:SoftwareLicense:create" }
+    requirements: { _method: post }
+
+software_licenses_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CatalogueBundle:SoftwareLicense:edit" }
+
+software_licenses_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CatalogueBundle:SoftwareLicense:update" }
+    requirements: { _method: post|put }
+
+software_licenses_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CatalogueBundle:SoftwareLicense:delete" }
+    requirements: { _method: post|delete }
