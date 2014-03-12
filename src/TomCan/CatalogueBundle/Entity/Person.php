@@ -47,6 +47,10 @@ class Person
      */
     private $remark;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Device", mappedBy="persons")
+     */
+    private $devices;
 
     /**
      * Get id
