@@ -1,0 +1,30 @@
+devices_types:
+    pattern:  /
+    defaults: { _controller: "CatalogueBundle:DeviceType:index" }
+
+devices_types_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CatalogueBundle:DeviceType:show" }
+
+devices_types_new:
+    pattern:  /new
+    defaults: { _controller: "CatalogueBundle:DeviceType:new" }
+
+devices_types_create:
+    pattern:  /create
+    defaults: { _controller: "CatalogueBundle:DeviceType:create" }
+    requirements: { _method: post }
+
+devices_types_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CatalogueBundle:DeviceType:edit" }
+
+devices_types_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CatalogueBundle:DeviceType:update" }
+    requirements: { _method: post|put }
+
+devices_types_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CatalogueBundle:DeviceType:delete" }
+    requirements: { _method: post|delete }

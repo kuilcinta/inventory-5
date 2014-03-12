@@ -1,0 +1,30 @@
+companies:
+    pattern:  /
+    defaults: { _controller: "CatalogueBundle:Company:index" }
+
+companies_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CatalogueBundle:Company:show" }
+
+companies_new:
+    pattern:  /new
+    defaults: { _controller: "CatalogueBundle:Company:new" }
+
+companies_create:
+    pattern:  /create
+    defaults: { _controller: "CatalogueBundle:Company:create" }
+    requirements: { _method: post }
+
+companies_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CatalogueBundle:Company:edit" }
+
+companies_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CatalogueBundle:Company:update" }
+    requirements: { _method: post|put }
+
+companies_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CatalogueBundle:Company:delete" }
+    requirements: { _method: post|delete }

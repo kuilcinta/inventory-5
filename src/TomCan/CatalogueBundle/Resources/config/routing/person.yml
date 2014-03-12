@@ -1,0 +1,30 @@
+persons:
+    pattern:  /
+    defaults: { _controller: "CatalogueBundle:Person:index" }
+
+persons_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CatalogueBundle:Person:show" }
+
+persons_new:
+    pattern:  /new
+    defaults: { _controller: "CatalogueBundle:Person:new" }
+
+persons_create:
+    pattern:  /create
+    defaults: { _controller: "CatalogueBundle:Person:create" }
+    requirements: { _method: post }
+
+persons_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CatalogueBundle:Person:edit" }
+
+persons_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CatalogueBundle:Person:update" }
+    requirements: { _method: post|put }
+
+persons_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CatalogueBundle:Person:delete" }
+    requirements: { _method: post|delete }

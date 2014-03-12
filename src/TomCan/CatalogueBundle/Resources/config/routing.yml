@@ -13,3 +13,19 @@ CatalogueBundle_software:
 CatalogueBundle_software_licenses:
     resource: "@CatalogueBundle/Resources/config/routing/softwarelicense.yml"
     prefix:   /software/licenses
+
+CatalogueBundle_companies:
+    resource: "@CatalogueBundle/Resources/config/routing/company.yml"
+    prefix:   /companies
+
+CatalogueBundle_devices:
+    resource: "@CatalogueBundle/Resources/config/routing/device.yml"
+    prefix:   /devices
+
+CatalogueBundle_devices_types:
+    resource: "@CatalogueBundle/Resources/config/routing/devicetype.yml"
+    prefix:   /devices/types
+
+CatalogueBundle_persons:
+    resource: "@CatalogueBundle/Resources/config/routing/person.yml"
+    prefix:   /persons
