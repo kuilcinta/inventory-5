@@ -9,7 +9,7 @@ The goal is simple:
 
 Installation
 ============
-- git clonse https://github.com/TomCan/inventory.git
+- git clone https://github.com/TomCan/inventory.git
 - cd inventory
 - php /path/to/composer.phar install
 --> enter the database and mailer settings when asked for
