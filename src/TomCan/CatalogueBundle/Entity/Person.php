@@ -2,6 +2,7 @@
 
 namespace TomCan\CatalogueBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -43,7 +44,7 @@ class Person
     /**
      * @var string
      *
-     * @ORM\Column(name="Remark", type="text")
+     * @ORM\Column(name="Remark", type="text", nullable=True)
      */
     private $remark;
 
@@ -130,4 +131,42 @@ class Person
     {
         return $this->remark;
     }
+
+    /**
+     * @param mixed $company
+     */
+    public function setCompany($company)
+    {
+        $this->company = $company;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
+     * @param mixed $devices
+     */
+    public function setDevices($devices)
+    {
+        $this->devices = $devices;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDevices()
+    {
+        return $this->devices;
+    }
+
+    public function __construct() {
+        $this->devices = new ArrayCollection();
+    }
+
+
 }

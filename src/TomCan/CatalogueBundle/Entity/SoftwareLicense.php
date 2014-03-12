@@ -2,6 +2,7 @@
 
 namespace TomCan\CatalogueBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -72,6 +73,11 @@ class SoftwareLicense
      * @ORM\Column(name="UpgradedTo", type="string", length=255, nullable=True)
      */
     private $upgradedTo;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Device", mappedBy="licenses")
+     */
+    private $devices;
 
     /**
      * Get id
@@ -243,4 +249,42 @@ class SoftwareLicense
     {
         return $this->upgradedTo;
     }
+
+    /**
+     * @param mixed $company
+     */
+    public function setCompany($company)
+    {
+        $this->company = $company;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
+     * @param mixed $devices
+     */
+    public function setDevices($devices)
+    {
+        $this->devices = $devices;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDevices()
+    {
+        return $this->devices;
+    }
+
+    public function __construct() {
+        $this->devices = new ArrayCollection();
+        $this->persons = new ArrayCollection();
+    }
+
 }

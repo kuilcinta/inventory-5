@@ -2,6 +2,7 @@
 
 namespace TomCan\CatalogueBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -65,9 +66,14 @@ class Device
     private $serialNo;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Person", mappedBy="devices")
+     * @ORM\ManyToMany(targetEntity="Person", inversedBy="devices")
      */
     private $persons;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="SoftwareLicense", inversedBy="devices")
+     */
+    private $licenses;
 
     /**
      * Get id
@@ -216,4 +222,58 @@ class Device
     {
         return $this->serialNo;
     }
+
+    /**
+     * @param mixed $company
+     */
+    public function setCompany($company)
+    {
+        $this->company = $company;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
+     * @param mixed $persons
+     */
+    public function setPersons($persons)
+    {
+        $this->persons = $persons;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPersons()
+    {
+        return $this->persons;
+    }
+
+    /**
+     * @param mixed $licenses
+     */
+    public function setLicenses($licenses)
+    {
+        $this->licenses = $licenses;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLicenses()
+    {
+        return $this->licenses;
+    }
+
+    public function __construct() {
+        $this->licenses = new ArrayCollection();
+        $this->persons = new ArrayCollection();
+    }
+
 }
