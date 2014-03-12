@@ -7,3 +7,11 @@ The goal is simple:
 - software inventory / licensing
 - linking it all together
 
+Installation
+============
+# git clonse https://github.com/TomCan/inventory.git
+# cd inventory
+# php /path/to/composer.phar install
+-- enter the database and mailer settings when asked for
+# php app/console doctrine:database:create (if applicable)
+# php app/console doctrine:schema:create
