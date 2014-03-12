@@ -5,12 +5,12 @@ namespace TomCan\CatalogueBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Vendor
+ * Company
  *
  * @ORM\Table()
  * @ORM\Entity
  */
-class Vendor
+class Company
 {
     /**
      * @var integer
@@ -20,11 +20,6 @@ class Vendor
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Company", inversedBy="id")
-     */
-    private $company;
 
     /**
      * @var string
@@ -48,7 +43,7 @@ class Vendor
      * Set name
      *
      * @param string $name
-     * @return Vendor
+     * @return Company
      */
     public function setName($name)
     {
@@ -66,9 +61,4 @@ class Vendor
     {
         return $this->name;
     }
-
-    public function __toString() {
-        return $this->name;
-    }
-
 }

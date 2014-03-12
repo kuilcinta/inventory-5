@@ -22,6 +22,11 @@ class SoftwareTitle
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Company", inversedBy="id")
+     */
+    private $company;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="Name", type="string", length=255)

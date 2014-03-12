@@ -22,6 +22,11 @@ class SoftwareLicense
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Company", inversedBy="id")
+     */
+    private $company;
+
+    /**
      * @ORM\ManyToOne(targetEntity="SoftwareTitle", inversedBy="licenses")
      */
     private $softwareTitle;
