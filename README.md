@@ -9,9 +9,9 @@ The goal is simple:
 
 Installation
 ============
-# git clonse https://github.com/TomCan/inventory.git
-# cd inventory
-# php /path/to/composer.phar install
--- enter the database and mailer settings when asked for
-# php app/console doctrine:database:create (if applicable)
-# php app/console doctrine:schema:create
+- git clonse https://github.com/TomCan/inventory.git
+- cd inventory
+- php /path/to/composer.phar install
+--> enter the database and mailer settings when asked for
+- php app/console doctrine:database:create (if applicable)
+- php app/console doctrine:schema:create
