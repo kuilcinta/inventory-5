@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    <h1>My Inventory</h1>
+
+    <ul>
+        <li><a href="{{ path('companies') }}">Companies</a></li>
+        <li><a href="{{ path('persons') }}">Persons</a></li>
+        <li><a href="{{ path('devices') }}">Devices</a></li>
+        <li><a href="{{ path('devices_types') }}">Device Types</a></li>
+        <li><a href="{{ path('software') }}">Software</a></li>
+        <li><a href="{{ path('software_licenses') }}">Software Licenses</a></li>
+        <li><a href="{{ path('softwarecategory') }}">Software Categories</a></li>
+        <li><a href="{{ path('vendor') }}">Vendors</a></li>
+    </ul>
+
+{% endblock %}

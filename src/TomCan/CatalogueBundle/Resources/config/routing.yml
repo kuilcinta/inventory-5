@@ -1,3 +1,7 @@
+CatalogueBundle_default:
+    pattern:  /
+    defaults: { _controller: "CatalogueBundle:Default:index" }
+
 CatalogueBundle_vendor:
     resource: "@CatalogueBundle/Resources/config/routing/vendor.yml"
     prefix:   /vendors
