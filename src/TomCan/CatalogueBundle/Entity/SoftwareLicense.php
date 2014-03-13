@@ -287,4 +287,9 @@ class SoftwareLicense
         $this->persons = new ArrayCollection();
     }
 
+    public function __toString() {
+        return "License " . $this->id;
+    }
+
+
 }
