@@ -47,21 +47,21 @@ class Device
     /**
      * @var string
      *
-     * @ORM\Column(name="Model", type="string", length=255)
+     * @ORM\Column(name="Model", type="string", length=255, nullable=true)
      */
     private $model;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="PartNo", type="string", length=255)
+     * @ORM\Column(name="PartNo", type="string", length=255, nullable=true)
      */
     private $partNo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="SerialNo", type="string", length=255)
+     * @ORM\Column(name="SerialNo", type="string", length=255, nullable=true)
      */
     private $serialNo;
 
