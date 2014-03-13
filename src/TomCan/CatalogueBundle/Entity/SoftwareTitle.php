@@ -72,7 +72,7 @@ class SoftwareTitle
     private $remark;
 
     /**
-     * @ORM\OneToMany(targetEntity="SoftwareLicense", mappedBy="id")
+     * @ORM\OneToMany(targetEntity="SoftwareLicense", mappedBy="softwareTitle")
      */
     private $licenses;
 
