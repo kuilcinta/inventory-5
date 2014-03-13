@@ -25,6 +25,14 @@
                 <th>Serialno</th>
                 <td>{{ entity.serialNo }}</td>
             </tr>
+            <tr>
+                <th>Persons</th>
+                <td>{% for person in entity.persons %}{{ person.name }}<br />{% endfor %}</td>
+            </tr>
+            <tr>
+                <th>Licenses</th>
+                <td>{% for license in entity.licenses %}{{ license.softwaretitle.name }} {{ license.softwaretitle.version }}<br />{% endfor %}</td>
+            </tr>
         </tbody>
     </table>
 

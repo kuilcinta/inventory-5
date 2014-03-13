@@ -29,6 +29,10 @@
                 <th>Remark</th>
                 <td>{{ entity.remark }}</td>
             </tr>
+            <tr>
+                <th>Licenses</th>
+                <td>{% for license in entity.licenses %}{{ license.licensekey }}<br />{% endfor %}</td>
+            </tr>
         </tbody>
     </table>
 
