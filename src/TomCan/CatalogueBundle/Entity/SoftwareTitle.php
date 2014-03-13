@@ -240,6 +240,40 @@ class SoftwareTitle
         return $this->category;
     }
 
+    /**
+     * @param mixed $company
+     */
+    public function setCompany($company)
+    {
+        $this->company = $company;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
+     * @param mixed $licenses
+     */
+    public function setLicenses($licenses)
+    {
+        $this->licenses = $licenses;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLicenses()
+    {
+        return $this->licenses;
+    }
+
+
+
     function __toString()
     {
         return $this->getVendor()->getName() . " " . $this->name . " " . $this->version;
