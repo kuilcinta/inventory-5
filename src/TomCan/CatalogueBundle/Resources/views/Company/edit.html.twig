@@ -1,6 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends 'CatalogueBundle::mybase.html.twig' %}
 
-{% block body -%}
+{% block body -%}{{ parent() }}
     <h1>Company edit</h1>
 
     {{ form(edit_form) }}
