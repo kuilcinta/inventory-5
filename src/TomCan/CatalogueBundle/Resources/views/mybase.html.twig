@@ -1,0 +1,59 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+
+        ul.menu:after {
+            clear: both;
+        }
+
+        ul.menu li {
+            float: left;
+            list-style: none;
+            margin-right: 10px;
+        }
+
+        table.records_list {
+            border-collapse: collapse;
+        }
+
+        table.records_list td, table.records_list th, table.records_list tr {
+            margin: 0px;
+            padding: 3px;
+        }
+
+        table.records_list thead {
+            background-color: #004f7b;
+            color: white;
+        }
+
+        table.records_list tbody tr:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+
+        table.records_list tbody tr:nth-child(even) {
+            background-color: #ddddff;
+        }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+
+    <h1>My Inventory</h1>
+
+    <ul class="menu">
+        <li><a href="{{ path('companies') }}">Companies</a></li>
+        <li><a href="{{ path('persons') }}">Persons</a></li>
+        <li><a href="{{ path('devices') }}">Devices</a></li>
+        <li><a href="{{ path('devices_types') }}">Device Types</a></li>
+        <li><a href="{{ path('software') }}">Software</a></li>
+        <li><a href="{{ path('software_licenses') }}">Software Licenses</a></li>
+        <li><a href="{{ path('softwarecategory') }}">Software Categories</a></li>
+        <li><a href="{{ path('vendor') }}">Vendors</a></li>
+    </ul>
+
+    <div>&nbsp;</div>
+
+{% endblock %}
