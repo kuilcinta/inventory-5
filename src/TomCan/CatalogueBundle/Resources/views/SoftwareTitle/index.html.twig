@@ -15,7 +15,7 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('software_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.name }} {{ entity.version }}</td>
+                <td>{{ entity.vendor.name }} {{ entity.name }} {{ entity.version }}</td>
                 <td>
                         <a href="{{ path('software_show', { 'id': entity.id }) }}">S</a>
                         <a href="{{ path('software_edit', { 'id': entity.id }) }}">E</a>

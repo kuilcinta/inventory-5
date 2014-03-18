@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <th>Licenses</th>
-                <td>{% for license in entity.licenses %}{{ license.licensekey }}<br />{% endfor %}</td>
+                <td>{% for license in entity.licenses %}{{ license.licensekey }} ({% for device in license.devices %}{{ device.name }}{% for person in device.persons %}, {{ person.name }}{% endfor %}{% endfor %}) <br />{% endfor %}</td>
             </tr>
         </tbody>
     </table>

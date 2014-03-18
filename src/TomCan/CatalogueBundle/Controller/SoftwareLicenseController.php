@@ -23,7 +23,8 @@ class SoftwareLicenseController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('CatalogueBundle:SoftwareLicense')->findAll();
+//        $entities = $em->getRepository('CatalogueBundle:SoftwareLicense')->findAll();
+        $entities = $em->getRepository('CatalogueBundle:SoftwareLicense')->findOrdered(array(), array(array("v.name", "ASC"), array("t.name", "ASC")));
 
         return $this->render('CatalogueBundle:SoftwareLicense:index.html.twig', array(
             'entities' => $entities,

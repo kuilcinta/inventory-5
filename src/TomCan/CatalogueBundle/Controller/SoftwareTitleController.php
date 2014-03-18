@@ -23,7 +23,7 @@ class SoftwareTitleController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('CatalogueBundle:SoftwareTitle')->findAll();
+        $entities = $em->getRepository('CatalogueBundle:SoftwareTitle')->findOrdered(array(), array(array("v.name", "ASC")));
 
         return $this->render('CatalogueBundle:SoftwareTitle:index.html.twig', array(
             'entities' => $entities,

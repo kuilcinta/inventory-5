@@ -17,7 +17,7 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('software_licenses_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{% if entity.softwaretitle != null %}{{ entity.softwaretitle.name }} {{ entity.softwaretitle.version }}{% endif %}</td>
+                <td>{% if entity.softwaretitle != null %}{{ entity.softwaretitle.vendor.name }} {{ entity.softwaretitle.name }} {{ entity.softwaretitle.version }}{% endif %}</td>
                 <td>{{ entity.licenseKey }}</td>
                 <td>{{ entity.seats }}</td>
                 <td>
