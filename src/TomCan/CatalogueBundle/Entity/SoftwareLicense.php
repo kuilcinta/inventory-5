@@ -75,6 +75,13 @@ class SoftwareLicense
     private $upgradedTo;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="alias", type="string", length=255, nullable=True)
+     */
+    private $alias;
+
+    /**
      * @ORM\ManyToMany(targetEntity="Device", mappedBy="licenses")
      */
     private $devices;
@@ -291,5 +298,20 @@ class SoftwareLicense
         return "License " . $this->id;
     }
 
+    /**
+     * @param string $alias
+     */
+    public function setAlias($alias)
+    {
+        $this->alias = $alias;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAlias()
+    {
+        return $this->alias;
+    }
 
 }

@@ -16,6 +16,7 @@ class SoftwareLicenseType extends AbstractType
     {
         $builder
             ->add('softwareLicenseType')
+            ->add('alias')
             ->add('seats')
             ->add('licenseKey')
             ->add('remark')
