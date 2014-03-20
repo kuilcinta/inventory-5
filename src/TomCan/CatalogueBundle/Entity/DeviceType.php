@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * DeviceType
  *
- * @ORM\Table()
+ * @ORM\Table(name="devicetype")
  * @ORM\Entity
  */
 class DeviceType
